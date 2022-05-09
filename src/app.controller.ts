@@ -10,8 +10,8 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get(':weight/:height')
-  getWeight(@Param('weight') weight, @Param('height') height): number {
+  @Get('calculateIMC/:weight/:height')
+  getIMC(@Param('weight') weight, @Param('height') height): number {
     return this.appService.getIMC(weight, height);
   }
 }
