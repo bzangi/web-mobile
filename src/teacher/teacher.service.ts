@@ -13,7 +13,7 @@ export class TeacherService {
     const teacherModel = new this.teacherModel({
       name: teacher.name,
       tia: teacher.tia,
-      course: teacher.disciplines,
+      disciplines: teacher.disciplines,
     });
     const result = await teacherModel.save();
     return result.id as string;

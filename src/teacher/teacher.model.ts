@@ -10,5 +10,5 @@ export interface Teacher extends mongoose.Document {
   id: string;
   name: string;
   tia: string;
-  disciplines: Array<string>;
+  disciplines: string[];
 }
