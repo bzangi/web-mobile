@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  Put,
 } from '@nestjs/common';
 import { Teacher } from './teacher.model';
 import { TeacherService } from './teacher.service';
@@ -25,7 +26,7 @@ export class TeacherController {
     return { id: response };
   }
 
-  @Patch()
+  @Put('/edit')
   async updateTeacher(@Body() teacher: Teacher) {
     await this.teacherService.updateTeacher(teacher);
   }
